@@ -1,4 +1,5 @@
 package assignment3;
+import java.util.*;
 
 /**
  * Instructions for this assignment.  Download this template from GitHub, fill in
@@ -8,7 +9,7 @@ package assignment3;
  * If a requirement is not implemented, you will receive 0 points.
  * Requirements are worth 50 points each.
  * 
- * @author myname
+ * @author KeethuRamalingam
  * 
  * REQUIREMENT 1:
  * 
@@ -99,6 +100,26 @@ package assignment3;
 public class Assignment3 {
 
     public static void main(String[] args) {
+  
+        
+        List<Animal> myAnimals = new ArrayList();
+        Animal Cat = new Cat('4',"Meow", "Cat");
+        Animal Dog = new Dog('4',"Woof", "Dog" );
+        Animal Mouse = new Mouse('4',"Squeek","Mouse");
+        Animal Human = new Human('2',"Narly","Human");
+        
+        myAnimals.add(Cat);
+        myAnimals.add(Dog);
+        myAnimals.add(Mouse);
+        myAnimals.add(Human);
+
+        for (int i = 0; i < myAnimals.size(); i++) {
+           myAnimals.get(i).getLegs();
+           myAnimals.get(i).speak();
+           myAnimals.get(i).whereAmI();
+        }
+
+        System.out.println();
     }
     
 }
